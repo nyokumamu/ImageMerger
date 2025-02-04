@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Merger</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Image Merger</h1>
+    <div class="main-container">
+        <div class="top-container">
+            <div class="preview-container">
+                <canvas id="preview"></canvas>
+            </div>
+            <div class="file-list-container">
+                <input type="file" id="file-input" multiple>
+                <ul id="image-list"></ul>
+            </div>
+        </div>
+        <div class="settings-container">
+            <div class="size-settings">
+                <label for="width-input">幅:</label>
+                <input type="number" id="width-input" value="800">
+                <label for="height-input">高さ:</label>
+                <input type="number" id="height-input" value="600">
+                <label for="maintain-aspect-ratio">
+                    <input type="checkbox" id="maintain-aspect-ratio" checked>
+                    アスペクト比を固定する(余計なスペースには空白を追加する)
+                </label>
+            </div>
+            <div class="output-settings">
+                <label for="output-path-input">Output Directory:</label>
+                <input type="text" id="output-path-input" readonly>
+                <button id="select-directory-btn">Select Directory</button>
+            </div>
+            <button id="export-btn">画像出力</button>
+        </div>
+    </div>
+    <script src="renderer.js"></script>
+</body>
+</html>
+

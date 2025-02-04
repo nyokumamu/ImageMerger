@@ -1,0 +1,21 @@
+{
+  "name": "image-merger-app",
+  "version": "1.0.0",
+  "description": "An app to merge images",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^25.0.0",
+    "sharp": "^0.32.0"
+  },
+  "devDependencies": {
+    "electron-builder": "^23.6.0"
+  }
+}
+

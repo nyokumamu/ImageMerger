@@ -1,0 +1,45 @@
+{
+  "name": "imagemergerapp",
+  "version": "1.0.0",
+  "description": "An app to merge images",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "keywords": [],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "sharp": "^0.32.6"
+  },
+  "devDependencies": {
+    "electron": "^25.0.0",
+    "electron-builder": "^23.6.0"
+  },
+  "build": {
+    "appId": "com.example.imagemergerapp",
+    "productName": "ImageMergerApp",
+    "files": [
+      "**/*",
+      "!node_modules/*/{test,tests}/**",
+      "!node_modules/.bin",
+      "!**/node_modules/.cache/**"
+    ],
+    "mac": {
+      "target": "dmg",
+      "icon": "icon.icns",
+      "category": "public.app-category.graphics-design"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "icon.ico"
+    },
+    "linux": {
+      "target": "AppImage",
+      "icon": "icon.png",
+      "category": "Graphics"
+    }
+  }
+}
+
